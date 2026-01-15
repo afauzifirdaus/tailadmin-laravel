@@ -20,7 +20,7 @@ RUN curl -sS https://getcomposer.org/installer -o composer-setup.php && \
 RUN mkdir -p /var/www/tailadmin
 WORKDIR /var/www/tailadmin
 
-ADD . /var/www/sosmed
+ADD . /var/www/tailadmin
 ADD server.conf /etc/apache2/sites-available/
 
 RUN a2dissite 000-default.conf && a2ensite server.conf
@@ -34,8 +34,8 @@ RUN mkdir -p bootstrap/cache \
 
 RUN chmod +x install.sh && ./install.sh
 
-RUN chown -R www-data:www-data /var/www/sosmed && \
-    chmod -R 755 /var/www/sosmed
+RUN chown -R www-data:www-data /var/www/tailadmin && \
+    chmod -R 755 /var/www/tailadmin
 
 EXPOSE 8000
 CMD php artisan serve --host=0.0.0.0 --port=8000
