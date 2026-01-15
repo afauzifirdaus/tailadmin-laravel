@@ -45,6 +45,8 @@ RUN mkdir -p bootstrap/cache storage/framework/cache storage/framework/sessions 
     chown -R www-data:www-data bootstrap storage && \
     chmod -R ug+rwx bootstrap storage
 
+RUN npm install @popperjs/core --save
+
 RUN chmod +x install.sh && ./install.sh
 
 RUN chown -R www-data:www-data /var/www/tailadmin-laravel && \
