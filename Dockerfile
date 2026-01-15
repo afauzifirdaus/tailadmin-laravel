@@ -15,7 +15,6 @@ RUN mkdir -p /etc/apt/keyrings && \
 RUN apt update -y && apt install -y curl && \
     DEBIAN_FRONTEND=noninteractive apt install -y apache2 \
     php \
-    npm \
     nodejs \
     php-xml \
     php-mbstring \
