@@ -1,9 +1,10 @@
 FROM ubuntu:22.04
 
-RUN apt update -y && \
+RUN apt update -y && apt install -y curl && \
     DEBIAN_FRONTEND=noninteractive apt install -y apache2 \
     php \
     npm \
+    nodejs \
     php-xml \
     php-mbstring \
     php-curl \
