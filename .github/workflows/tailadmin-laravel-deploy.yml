@@ -5,7 +5,7 @@ on:
     branches:
       - main
 env:
-  IMAGE_NAME: "${{ secrets.DOCKER_USER }}/fauzifirdaus-tailadmin-laravel"
+  IMAGE_NAME: "${{ secrets.DOCKER_USER }}-tailadmin-laravel:beta"
   DOCKER_USER: "${{ secrets.DOCKER_USER }}"
 jobs:
   run-mysql-in-docker:
