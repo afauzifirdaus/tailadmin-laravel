@@ -21,7 +21,7 @@ RUN mkdir -p /var/www/tailadmin
 WORKDIR /var/www/tailadmin
 
 ADD . /var/www/sosmed
-ADD sosmed.conf /etc/apache2/sites-available/
+ADD server.conf /etc/apache2/sites-available/
 
 RUN a2dissite 000-default.conf && a2ensite server.conf
 
