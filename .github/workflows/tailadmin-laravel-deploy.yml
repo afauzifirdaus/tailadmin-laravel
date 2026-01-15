@@ -36,7 +36,7 @@ jobs:
       - name: Push Image
         run: docker push $IMAGE_NAME
 
-  deploy-social-media:
+  deploy:
     needs: build-push-image
     runs-on: self-hosted
     steps:
