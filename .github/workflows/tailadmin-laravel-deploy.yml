@@ -4,6 +4,9 @@ on:
   push:
     branches:
       - main
+permissions:
+  contents: read
+  packages: write
 env:
   IMAGE_NAME: "${{ secrets.DOCKER_USER }}-tailadmin-laravel:beta"
   DOCKER_USER: "${{ secrets.DOCKER_USER }}"
